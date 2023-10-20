@@ -1,0 +1,353 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  global */
+
+:root {
+    --fushia: #F7146B;
+    --navy-blue: #0F2368;
+    --white: #FFF;
+    --surface-grey: #F4F5FD;
+    --black-50: #333;
+    --black-100: #181818;
+    --black-200: #070707;
+    --red: #f40712;
+    --max-width: 1000px;
+    --radius-small: 2px;
+    --radius-medium: 4px;
+    --radius-large: 8px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--black-100);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column
+}
+
+p {
+    color: var(--black-100);
+}
+
+.light {
+    color: var(--white);
+}
+
+.red {
+    color: var(--red);
+}
+
+
+.main {
+    background-color: var(--black-100);
+    display: flex;
+    padding: 3em 1em;
+    row-gap: 3em;
+    flex-direction: column;
+}
+
+.bodyWidth {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    width: 100%;
+
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: auto
+}
+
+.main .bodyWidth {
+    justify-content: initial;
+    max-width: var(--max-width);
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin: auto
+}
+
+
+
+/*  HEADER  STYLES   */
+
+header {
+    display: flex;
+    background-color: var(--black-200);
+    border: 1px solid var(--red);
+    border-width: 0 0 1px 0;
+    padding: 1em 2em;
+    width: 100%
+}
+
+header svg.svg-icon {
+    -webkit-font-smoothing: antialiased;
+    fill: #e50914;
+    height: 40px;
+    display: block;
+    width: 110px;
+}
+
+header .logo span {
+    display: none;
+}
+
+header .header-right {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+}
+
+header .header-right p {
+    color: var(--white);
+    text-transform: uppercase;
+    margin-right: 0.5em
+}
+
+header .btn {
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    /* -webkit-appearance: button; */
+    border: 0;
+    border-radius: var(--radius-small);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: .1px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #e50914;
+    background-image: linear-gradient(180deg, #e50914, #db0510);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .45);
+    color: #fff;
+    min-width: 112px;
+    margin: 0 0 0 8px;
+    line-height: 15px;
+    min-height: 0;
+    font-size: 13px;
+    padding: 9px 12px;
+    text-transform: uppercase;
+}
+
+header a.authLinks {
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    background-color: transparent;
+    float: right;
+    margin: 0 0 0 8px;
+    border: 1px solid #888;
+    border-radius: var(--radius-small);
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 9px 12px;
+}
+
+
+.intro {
+    color: var(--white);
+    margin: 1em 0;
+    width: 100%;
+}
+
+.intro h1 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    margin: 0 0 .55em;
+    font-weight: 900;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+    font-size: 3rem;
+}
+
+.intro p {
+    width: 70%;
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    margin-top: .4vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+    transition-delay: 0s;
+    transition-duration: .75s;
+    font-size: 19px;
+}
+
+
+/*  VIDEO CARD   */
+
+.videoCard {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--surface-grey);
+    width: 280px;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.70);
+    min-height: 580px;
+    border-radius: var(--radius-medium);
+}
+
+.videoCard h2 {
+    color: var(--red);
+    font-size: 1.6em;
+    margin: 0.1em 0 0 0
+}
+
+.cover {
+    height: 360px;
+    display: flex;
+}
+
+.cover img {
+    width: 281px;
+    margin: 0
+}
+
+.details {
+    padding: 1em
+}
+
+.releaseDate {
+    font-size: 0.85em
+}
+
+.releaseDate span {
+    color: var(--red);
+}
+
+.seasonNumber {
+    font-weight: bold;
+    margin: 0.3em 0 0.8em 0;
+    font-size: 1.1em;
+}
+
+.synopsis {
+    margin: 0 0 0.2em 0
+}
+
+
+
+
+
+/*  FOOTER STYLES   */
+
+footer {
+    border: 2px solid var(--red);
+    border-width: 2px 0 0 0;
+    color: var(--white);
+    background-color: var(--black-200);
+}
+
+footer>div {
+    padding: 2em 0;
+    margin: auto;
+    width: auto;
+    max-width: var(--max-width);
+}
+
+footer p {
+    color: var(--surface-grey);
+}
+
+
+
+
+
+/*  MOBILE STYLES */
+
+@media all and (max-width: 1030px) {
+    .main {
+        gap: 2.7rem
+    }
+
+    .main .bodyWidth {
+        max-width: 650px;
+        justify-content: space-between;
+        gap: 20px
+    }
+
+    .intro p {
+        width: 100%;
+    }
+
+    .videoCard {
+        margin-bottom: 1rem
+    }
+
+    footer>div {
+        padding: 3em 1em;
+
+        width: 90%;
+    }
+}
+
+
+@media all and (max-width: 670px) {
+    .header-right p {
+        display: none
+    }
+
+    header svg.svg-icon {
+        width: 100px !important;
+        margin-left: 1rem;
+        margin-top: 0.1rem
+    }
+}
+
+
+@media all and (max-width: 740px) {
+
+    header {
+        padding: 0.68rem 1rem 0.65rem 1.4rem;
+    }
+
+    header .btn,
+    header a.authLinks {
+        font-size: 10px;
+        padding: 7px 6px;
+        min-width: 60px
+    }
+
+    .main .bodyWidth {
+        max-width: 600px;
+        gap: 36px
+    }
+
+    .intro {
+
+        width: 100%
+    }
+
+    .intro p {
+        font-size: 1.2rem
+    }
+
+    .videoCard {
+        margin: auto;
+    }
+
+}
+
+
+@media all and (max-width: 630px) {
+    .intro {
+        padding: 0 10%;
+        margin: auto;
+    }
+
+    header svg.svg-icon {
+        width: 95px !important;
+    }
+}
