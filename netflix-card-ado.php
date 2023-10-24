@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Toutes les vidéos accessibles pour un public mineur entre 0 et 13 ans</title>
     <link rel="stylesheet" href="css/netflix.css">
     <link rel="icon" type="image/x-icon" href="/netflix-card/img/faviconV2.png">
 </head>
@@ -20,13 +20,13 @@
         'root'
     );
 
-    // Requete SQL pour récupérer toute la table video
+    // Requete SQL pour récupérer toutes les vidéos accessibles pour un public mineur entre 0 et 13 ans
     $videoStatement = $db->prepare('SELECT * FROM video WHERE age_limit<=13 ');
     $videoStatement->execute();
     $allVideos = $videoStatement->fetchAll();
 
     // afficher un champ de la base 
-    // echo $allVideos[0]['title']; 
+    echo $allVideos[0]['title'];
 
 
     /* parcourir le tableau des résultats de la requette 
@@ -40,8 +40,8 @@
     define('COVER_IMAGE_PATH', '/netflix-card-dyna/img/');
     define('SEASON_NUMBER_WORDING', 'Saison');
     define('HEADER_BASELINE', 'Accès illimité aux films et séries');
-    define('H1_TEXTE', 'Section Ados');
-    define('INTRO_TEXTE', "Qu'il soit effrayant, comique, dramatique, romantique ou autre, le cinéma sait éveiller nos sens. Et avec autant de titres disponibles, il y a tellement de choses à découvrir !");
+    define('H1_TEXTE', 'Films et séries pour ados');
+    define('INTRO_TEXTE', "Premiers émois amoureux. Récits initiatiques. Histoires inspirantes et anti-déprime. Ces films s'emparent de toutes les problématiques de l'adolescence de manière captivante.");
     define('BTN_ABO_TEXTE', "Abonnez-vous");
     define('BTN_LOGIN_TEXTE', "S'identifier");
     ?>

@@ -20,6 +20,7 @@
         'root'
     );
 
+    //  Création de la requete SQL
     $videoStatement = $db->prepare('SELECT * FROM video');
     $videoStatement->execute();
     $allVideos = $videoStatement->fetchAll();
@@ -31,9 +32,6 @@
         echo $video['title'];
     }
 */
-
-
-
 
     // déclaration des constantes
     define('RELEASE_YEAR_TEXT', 'Année de sortie');
@@ -47,7 +45,7 @@
         <div class="bodyWidth">
             <div class="videoCard">
                 <div class="cover">
-                    <img src="<?php echo (COVER_IMAGE_PATH . $allVideos[0]['image_thumbnail']); ?>" alt="<?php echo ($movieTitle . " : " . SEASON_NUMBER_WORDING . $seasonNumber . " "); ?>">
+                    <img src="<?php echo (COVER_IMAGE_PATH . $allVideos[0]['image_thumbnail']); ?>" alt="<?php echo ($allVideos[0]['title'] . " : " . SEASON_NUMBER_WORDING . $allVideos[0]['season_number']); ?>">
                 </div>
                 <div class="details">
                     <h2><?php echo $allVideos[0]['title']; ?></h2>
